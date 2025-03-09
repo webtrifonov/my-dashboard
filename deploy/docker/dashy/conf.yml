@@ -1,0 +1,69 @@
+pageInfo:
+  title: Trifonov Dashboard
+  description: Welcome to your new dashboard!!!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+      target: newtab
+    - title: Documentation
+      path: https://dashy.to/docs
+      target: newtab
+  logo: >-
+    https://www.clipartmax.com/png/middle/268-2682703_boy-free-icon-person-flat-icon-png.png
+appConfig:
+  theme: material-dark #cherry-blossom
+  layout: auto
+  iconSize: medium
+  auth:
+    enableGuestAccess: true
+    users:
+      - user: trifonov
+        hash: b54e2c81c9f581282c73f6ceb2c83a8ae8df97c5a9d906398a0c774e4cd4023a
+        type: admin
+      - user: admin
+        hash: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+        type: admin
+      - user: guest
+        hash: 84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec
+        type: normal
+sections:
+  - name: Home Services
+    icon: fas fa-rocket
+    items:
+      - title: MeTube
+        description: Youtube Downloads
+        icon: metube-logo.svg
+        url: https://youtube.com/
+        target: newtab
+        statusCheck: true
+        id: 0_1261_metube
+      - title: My Wireguard VPN
+        description: >-
+          wg-easy dashboard
+        icon: wireguard-logo.svg
+        url: http://localhost:51821/
+        id: 3_1261_mywireguard
+      # - title: MeTube
+      #   description: Youtube Downloads
+      #   icon: >-
+      #     https://raw.githubusercontent.com/walkxcode/dashboard-icons/be82e22c418f5980ee2a13064d50f1483df39c8c/svg/youtubedl.svg
+      #   url: https://youtube.com/
+      #   target: newtab
+      #   statusCheck: true
+      #   id: 2_1261_metube
+  - name: My Chatapp
+    icon: fas fa-rocket
+    items:
+      - title: Auth service
+        description: ChatApp Auth service
+        icon: chatapp-logo.svg
+        url: google.com
+        target: newtab
+        statusCheck: true
+        id: 1_1261_chatapp
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
