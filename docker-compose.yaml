@@ -1,9 +1,8 @@
 services:
   dashy:
+    env_file: './.env'
     container_name: dashy
     image: lissy93/dashy
-    environment:
-      - NODE_ENV=production
     # build:
     #   context: .
     #   dockerfile: './deploy/docker/dashy/Dockerfile'

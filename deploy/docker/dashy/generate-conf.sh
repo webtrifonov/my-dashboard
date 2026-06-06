@@ -1,3 +1,9 @@
+#!/bin/bash
+source "./.env"
+DASHY_CONFIG_PATH="./deploy/docker/dashy/conf.yml"
+touch $DASHY_CONFIG_PATH
+chmod 777 $DASHY_CONFIG_PATH
+cat << EOF > $DASHY_CONFIG_PATH
 pageInfo:
   title: Trifonov Dashboard
   description: Welcome to your new dashboard!
@@ -33,7 +39,7 @@ sections:
       - title: MeTube
         description: Youtube Downloads
         icon: metube-logo.svg
-        url: http://localhost
+        url: http://$MY_HOST
         target: newtab
         statusCheck: true
         id: 0_1261_metube
@@ -41,7 +47,7 @@ sections:
         description: >-
           wg-easy dashboard
         icon: wireguard-logo.svg
-        url: http://localhost:51821/
+        url: http://$MY_HOST:51821/
         id: 3_1261_mywireguard
   - name: My Chatapp
     icon: fas fa-rocket
@@ -59,3 +65,6 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
+pages: []
+EOF
+echo "Config generated in: $DASHY_CONFIG_PATH"
