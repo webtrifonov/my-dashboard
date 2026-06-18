@@ -25,6 +25,11 @@ docker -v #Docker version 28.0.1, build 068a01e
 # install git
 sudo apt-get install git -y
 
+#install ohmyzsh shell
+# zsh requires git, curl
+sudo apt-get install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Clone the repo
 git clone https://github.com/webtrifonov/metube.git /app
 
